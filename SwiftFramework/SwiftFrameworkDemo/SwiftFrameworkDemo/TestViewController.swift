@@ -46,7 +46,7 @@ extension TestViewController:SwiftControllerInitProtocol {
 extension TestViewController:SwiftRouteProtocol {
     static func prepareController() -> UIViewController? {
         print("<SwiftRouteProtocol> prepareController: TestViewController")
-        if let ctl = UIViewController.prepareStoryboardController(storyboardName: "Main", controllerIdentifier: "TestViewController") {
+        if let ctl = UIViewController.prepareStoryboardController(storyboardName: UIStoryboard.Storyboard.Main.rawValue, controllerIdentifier: UIStoryboard.StoryboardController.TestViewController.rawValue) {
             let naviCtl = UINavigationController()
             naviCtl.viewControllers = [ctl]
             

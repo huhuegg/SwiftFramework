@@ -68,6 +68,7 @@ public extension UIViewController {
 public extension UIViewController {
     func setupTabBar(hidden:Bool) {
         self.tabBarController?.tabBar.isHidden = hidden
+        self.tabBarController?.setupTabBar(hidden: hidden)
     }
     
     //hidden ＝＝ true时，隐藏Navi
@@ -76,7 +77,7 @@ public extension UIViewController {
         self.navigationController?.navigationBar.isHidden = hidden
         self.navigationItem.hidesBackButton = hidesBackButton
         self.navigationItem.title = title
-
+        self.navigationController?.setNavigationBarHidden(hidden, animated: false)
     }
     
 }

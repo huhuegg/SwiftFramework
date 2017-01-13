@@ -40,7 +40,7 @@ extension ViewController:SwiftRouteProtocol {
     
     static func prepareController() -> UIViewController? {
         print("<SwiftRouteProtocol> prepareController: ViewController")
-        if let ctl = UIViewController.prepareStoryboardController(storyboardName: "Main", controllerIdentifier: "ViewController") {
+        if let ctl = UIViewController.prepareStoryboardController(storyboardName: UIStoryboard.Storyboard.Main.rawValue, controllerIdentifier: UIStoryboard.StoryboardController.ViewController.rawValue) {
             
             let naviCtl = UINavigationController()
             naviCtl.viewControllers = [ctl]
